@@ -12,10 +12,12 @@ composer require assoconnect/your-repo
 ## How-to
 
 * Update the current README replacing `your-repo` with the real name of your repo
-* Update the [sonar-project.properties](./sonar-project.properties) file replacing `your-repo` with the real name of your repo
+* Update the [build.yml](.github/workflows/build.yml) file replacing `your-repo` with the real name of your repo
 * Update the [composer.json](./composer.json) file replacing `your-repo` with the real name of your repo, and the PSR setting. Add also a description and some keywords
-* Create a project at [SonarCloud](https://sonarcloud.io/projects/create) with `assoconnect_your-repo` as key and `your-repo` as display name
-* Get a [SonarCloud token](https://sonarcloud.io/account/security/) then add it as the `SONAR_TOKEN` environnement variable on Travis CI at https://travis-ci.com/github/assoconnect/your-repo/settings
+* Keep the relevant `phpunit.xml.dist` file and rename it to `phpunit.xml.dist`
+* Add the repository to the [Web Developers Team](https://github.com/orgs/assoconnect/teams/web-developpers/repositories) and make the team admin
+* Create a project at [SonarCloud](https://sonarcloud.io/projects/create) under the AssoConnect organization with `assoconnect_your-repo` as key and `your-repo` as display name
+* Don't configure the SonarCloud project as the SonarCloud token is already stored at the organization level at Github
 * Code must be placed in `src`
 * Tests must be placed in `tests`
 * Publish it at [Packagist](https://packagist.org/packages/submit)
