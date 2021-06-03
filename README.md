@@ -1,6 +1,7 @@
 # Title
 
 [![Build Status](https://travis-ci.org/assoconnect/your-repo.svg?branch=master)](https://travis-ci.org/assoconnect/your-repo)
+[![Build Status](https://github.com/assoconnect/your-repo/actions/workflows/build.yml/badge.svg)](https://github.com/assoconnect/your-repo/actions/workflows/build.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=assoconnect_your-repo&metric=alert_status)](https://sonarcloud.io/dashboard?id=assoconnect_your-repo)
 
 ## Installation
