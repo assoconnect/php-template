@@ -3,6 +3,9 @@ parameters:
     paths:
         - src/
         - tests/
+    # Enforce typed properties being assigned in the constructor
+    checkUninitializedProperties: true
+
 includes:
     - vendor/phpstan/phpstan-phpunit/extension.neon
     - vendor/phpstan/phpstan-phpunit/rules.neon
