@@ -2,7 +2,7 @@ name: Build
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
     types: [opened, synchronize, reopened]
 
@@ -28,6 +28,10 @@ jobs:
       - uses: ramsey/composer-install@v2
         with:
           dependency-versions: ${{ matrix.dependency-versions }}
+
+      - name: Upgrade analysis tools to latest
+        if: ${{ matrix.dependency-versions == 'lowest' }}
+        run: composer update phpstan/phpstan rector/rector phpunit/phpunit --with-all-dependencies --no-interaction
 
       - run: vendor/bin/phpcs
         if: ${{ failure() ||  success() }}
